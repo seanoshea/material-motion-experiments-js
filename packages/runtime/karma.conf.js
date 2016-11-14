@@ -1,7 +1,13 @@
 module.exports = function(config) {
-  config.set({
+  configuration = {
     basePath: '',
     frameworks: ['mocha'],
+    customLaunchers: {
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
     browsers: ['Chrome', 'ChromeCanary', 'Safari', 'Firefox'],
     reporters: ['progress'],
     client: {
@@ -41,5 +47,9 @@ module.exports = function(config) {
     autoWatch: true,
     singleRun: false,
     concurrency: Infinity,
-  });
+  };
+  if (process.env.TRAVIS) {
+    configuration.browsers = ['Chrome_travis_ci'];
+  }
+  config.set(configuration);
 };
