@@ -20,4 +20,4 @@ Motion Starmap](https://material-motion.gitbooks.io/material-motion-starmap/cont
 
 ## License ##
 
-[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) 
