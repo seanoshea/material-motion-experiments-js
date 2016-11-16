@@ -8,9 +8,6 @@
     "build": "$(npm bin)/tsickle",
     "start": "node ./devServer.js"
   },
-  "dependencies": {
-    "material-motion-runtime": "1.0.0"
-  },
   "devDependencies": {
     "lerna": "2.0.0-beta.30",
     "ts-loader": "^0.9.5",
