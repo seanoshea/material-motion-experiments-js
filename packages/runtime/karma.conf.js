@@ -3,8 +3,8 @@ module.exports = function(config) {
     basePath: '',
     frameworks: ['mocha'],
     customLaunchers: {
-      Chrome_travis_ci: {
-        base: 'Chrome',
+      Firefox_travis_ci: {
+        base: 'Firefox',
         flags: ['--no-sandbox']
       }
     },
@@ -47,7 +47,7 @@ module.exports = function(config) {
     concurrency: Infinity,
   };
   if (process.env.TRAVIS) {
-    configuration.browsers = ['Chrome_travis_ci'];
+    configuration.browsers = ['Firefox_travis_ci'];
   }
   config.set(configuration);
 };
