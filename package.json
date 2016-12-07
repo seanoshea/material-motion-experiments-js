@@ -4,6 +4,7 @@
   "description": "Makes it easy to create rich, interactive motion.",
   "main": "src/index.js",
   "scripts": {
+    "test": "$(yarn bin)/lerna run test"
   },
   "dependencies": {
   },
