@@ -9,6 +9,9 @@ module.exports = function(config) {
       }
     },
     browsers: ['Chrome', 'ChromeCanary', 'Safari', 'Firefox'],
+    junitReporter: {
+      outputFile: '../test-results.xml'
+    },
     reporters: ['junit', 'dots'],
     files: [
       '**/src/**/__tests__/**',
