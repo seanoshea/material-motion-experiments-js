@@ -9,12 +9,7 @@ module.exports = function(config) {
       }
     },
     browsers: ['Chrome', 'ChromeCanary', 'Safari', 'Firefox'],
-    reporters: ['progress'],
-    client: {
-      mocha: {
-        reporter: 'html',
-      },
-    },
+    reporters: ['junit', 'dots'],
     files: [
       '**/src/**/__tests__/**',
     ],
