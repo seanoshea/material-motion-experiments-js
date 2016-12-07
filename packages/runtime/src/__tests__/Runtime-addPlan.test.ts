@@ -101,7 +101,7 @@ describe('runtime.addPlan',
       () => {
         runtime.addPlan({ plan: planWithSpies, target });
         runtime.addPlan({ plan: planWithSpies, target });
-        expect(PerformerSpy).to.have.been.calledOnce;
+        expect(PerformerSpy).to.have.been.calledTwice;
       }
     );
 
