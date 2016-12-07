@@ -9,8 +9,10 @@ cache:
   - node_modules
   - $HOME/.yarn-cache
 before_script:
+  - export CHROME_BIN=/usr/bin/google-chrome
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
+  - sudo dpkg -i google-chrome*.deb
 install:
   - npm install
 before_script:

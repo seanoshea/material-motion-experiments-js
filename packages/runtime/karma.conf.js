@@ -4,7 +4,7 @@ module.exports = function(config) {
     frameworks: ['mocha'],
     customLaunchers: {
       Firefox_travis_ci: {
-        base: 'Firefox',
+        base: 'Chrome',
         flags: ['--no-sandbox']
       }
     },
