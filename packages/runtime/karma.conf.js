@@ -1,7 +1,7 @@
 module.exports = function(config) {
   configuration = {
     basePath: '',
-    frameworks: ['mocha', 'es6-shim', 'jasmine', 'requirejs'],
+    frameworks: ['es6-shim', 'jasmine', 'requirejs'],
     customLaunchers: {
       Firefox_travis_ci: {
         base: 'PhantomJS',
