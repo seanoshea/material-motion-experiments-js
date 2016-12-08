@@ -11,8 +11,8 @@ module.exports = function(config) {
     browsers: ['PhantomJS'],
     reporters: ['progress'],
     files: [
-      '**/src/**/__tests__/test-main.js',
-      '**/src/**/__tests__/**',
+      {pattern: 'src/__tests__/*.ts', included: false},
+      'src/__tests__/test-main.js'
     ],
     plugins: [
       'karma-es6-shim',

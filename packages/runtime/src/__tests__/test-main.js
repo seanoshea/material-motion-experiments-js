@@ -1,17 +1,11 @@
-var allTestFiles = [];
-var TEST_REGEXP = /(spec|test)\.js$/i;
+var tests = [];
+for (var file in window.__karma__.files) {
+    tests.push(file);
+}
 
-var pathToModule = function(path) {
-  return path.replace(/^\/base\//, '').replace(/\.js$/, '');
-};
-
-Object.keys(window.__karma__.files).forEach(function(file) {
-  if (TEST_REGEXP.test(file)) {
-    allTestFiles.push(pathToModule(file));
-  }
-});
-
-require.config({
-  deps: allTestFiles,
-  callback: window.__karma__.start
+requirejs.config({
+    // Karma serves files from '/base'
+    baseUrl: '/base/src/__tests__',
+    deps: tests,
+    callback: window.__karma__.start
 });
