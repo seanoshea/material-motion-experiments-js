@@ -10,10 +10,7 @@ module.exports = function(config) {
     },
     browsers: ['PhantomJS'],
     reporters: ['progress'],
-    files: [
-      {pattern: 'src/__tests__/*.ts', included: false},
-      'src/__tests__/test-main.js'
-    ],
+    files: [ 'src/__tests__/test-main.js' ],
     plugins: [
       'karma-es6-shim',
       'karma-jasmine',
