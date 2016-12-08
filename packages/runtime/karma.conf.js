@@ -1,20 +1,23 @@
 module.exports = function(config) {
   configuration = {
     basePath: '',
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'es6-shim', 'jasmine', 'requirejs'],
     customLaunchers: {
       Firefox_travis_ci: {
-        base: 'Chrome',
+        base: 'PhantomJS',
         flags: ['--no-sandbox']
       }
     },
-    browsers: ['Chrome', 'ChromeCanary', 'Safari', 'Firefox'],
-    junitReporter: {
-      outputFile: '../test-results.xml'
-    },
-    reporters: ['junit', 'dots'],
+    browsers: ['PhantomJS'],
+    reporters: ['progress'],
     files: [
       '**/src/**/__tests__/**',
+    ],
+    plugins: [
+      'karma-es6-shim',
+      'karma-jasmine',
+      'karma-requirejs',
+      'karma-phantomjs-launcher'
     ],
     exclude: [
       '**/*.map',
