@@ -1,9 +1,9 @@
 module.exports = function(config) {
   configuration = {
     basePath: '',
-    frameworks: ['es6-shim', 'jasmine', 'requirejs'],
+    frameworks: ['jasmine', 'requirejs', 'es6-shim'],
     customLaunchers: {
-      Firefox_travis_ci: {
+      travis_ci: {
         base: 'PhantomJS',
         flags: ['--no-sandbox']
       }
@@ -11,6 +11,7 @@ module.exports = function(config) {
     browsers: ['PhantomJS'],
     reporters: ['progress'],
     files: [
+      '**/src/**/__tests__/test-main.js',
       '**/src/**/__tests__/**',
     ],
     plugins: [
@@ -50,7 +51,7 @@ module.exports = function(config) {
     concurrency: Infinity,
   };
   if (process.env.TRAVIS) {
-    configuration.browsers = ['Firefox_travis_ci'];
+    configuration.browsers = ['travis_ci'];
   }
   config.set(configuration);
 };
